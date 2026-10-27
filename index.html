@@ -1,4 +1,9 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>[hidden]{display:none!important}img{max-width:100%}</style>
 <title>Aaron Organic Foods</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
@@ -219,6 +224,8 @@ footer .info{display:grid;gap:4px;text-align:right}
 @media (prefers-reduced-motion: reduce){.ribbon .track{animation:none}}
 </style>
 
+</head>
+<body>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top">Aaron <span>Organic</span> Foods</a>
@@ -234,10 +241,10 @@ footer .info{display:grid;gap:4px;text-align:right}
 <main id="top">
 <section class="hero" aria-roledescription="carousel" aria-label="Featured foods">
   <div class="slides" id="slides">
-    <div class="slide on" data-cap="Matooke, 10 kg box"><img src="img/bananas.jpg" alt="Bunches of green matooke bananas" style="object-position:50% 30%"></div>
-    <div class="slide" data-cap="Beef, 1 kg"><img src="img/beef.jpg" alt="A tray of fresh beef cuts" style="object-position:50% 40%"></div>
-    <div class="slide" data-cap="Fish steaks"><img src="img/fish.jpg" alt="Thick fish steaks in a bowl" style="object-position:50% 40%"></div>
-    <div class="slide" data-cap="Sweet potatoes"><img src="img/sweetpotatoes.jpg" alt="A pile of pink-skinned sweet potatoes" style="object-position:50% 45%"></div>
+    <div class="slide on" data-cap="Matooke, 10 kg box"><img src="photo-bananas.jpg" alt="Bunches of green matooke bananas" style="object-position:50% 30%"></div>
+    <div class="slide" data-cap="Beef, 1 kg"><img src="photo-beef.jpg" alt="A tray of fresh beef cuts" style="object-position:50% 40%"></div>
+    <div class="slide" data-cap="Fish steaks"><img src="photo-fish.jpg" alt="Thick fish steaks in a bowl" style="object-position:50% 40%"></div>
+    <div class="slide" data-cap="Sweet potatoes"><img src="photo-sweetpotatoes.jpg" alt="A pile of pink-skinned sweet potatoes" style="object-position:50% 45%"></div>
   </div>
   <div class="wrap">
     <p class="eyebrow">Organic African staples · Denmark</p>
@@ -275,15 +282,15 @@ footer .info{display:grid;gap:4px;text-align:right}
     </div>
     <div class="cats">
       <a class="cat m1 rice" href="#grains">
-        <img src="img/greenland.jpg" alt="A sack of long grain rice">
+        <img src="photo-greenland.jpg" alt="A sack of long grain rice">
         <div class="in"><span class="n">GRAINS &amp; STAPLES</span><h3>Rice, posho, beans</h3><p>The base of the plate, from 1 kg bags to 25 kg sacks.</p></div>
       </a>
       <a class="cat m2" href="#meat">
-        <img src="img/hangingbeef.jpg" alt="Cuts of beef hanging in a butcher shop" style="object-position:50% 40%">
+        <img src="photo-hangingbeef.jpg" alt="Cuts of beef hanging in a butcher shop" style="object-position:50% 40%">
         <div class="in"><span class="n">MEAT &amp; SEAFOOD</span><h3>Fish and meat</h3><p>Frozen fish, goat meat and beef, packed cold for the trip.</p></div>
       </a>
       <a class="cat m3" href="#produce">
-        <img src="img/potatoes.jpg" alt="A pile of yellow potatoes" style="object-position:50% 50%;background:#fff;object-fit:contain;padding:24px 24px 120px">
+        <img src="photo-potatoes.jpg" alt="A pile of yellow potatoes" style="object-position:50% 50%;background:#fff;object-fit:contain;padding:24px 24px 120px">
         <div class="in"><span class="n">FRESH PRODUCE</span><h3>Matooke and roots</h3><p>Banana boxes, potatoes and frozen yam for your pot.</p></div>
       </a>
     </div>
@@ -427,7 +434,7 @@ footer .info{display:grid;gap:4px;text-align:right}
     var grid=sec.querySelector('.grid');
     g.items.forEach(function(p){
       var c=document.createElement('article');c.className='card';
-      var media=p.img?'<img class="'+(p.fit==='pack'?'pack':'')+'" src="img/'+p.img+'.jpg" alt="" loading="lazy"'+(p.pos?' style="object-position:'+p.pos+'"':'')+'>':'<div class="none">'+ICON[p.icon]+'</div>';
+      var media=p.img?'<img class="'+(p.fit==='pack'?'pack':'')+'" src="photo-'+p.img+'.jpg" alt="" loading="lazy"'+(p.pos?' style="object-position:'+p.pos+'"':'')+'>':'<div class="none">'+ICON[p.icon]+'</div>';
       c.innerHTML='<div class="media">'+media+'</div><div class="body"><div><h4></h4><div class="unit"></div></div><div class="buy"><span class="price">'+kr(p.p)+'</span><div class="stepper"><button type="button" aria-label="Remove one">−</button><output>0</output><button type="button" aria-label="Add one">+</button></div></div></div>';
       c.querySelector('h4').textContent=p.n;c.querySelector('.unit').textContent=p.u;
       var out=c.querySelector('output'),b=c.querySelectorAll('button');
@@ -522,4 +529,5 @@ footer .info{display:grid;gap:4px;text-align:right}
 })();
 </script>
 
-</body></html>
+</body>
+</html>
